@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Система 00_12</title>
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #27ae60;
+            font-family: 'Courier New', monospace;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            border: 1px solid rgba(39,174,96,0.5);
+            padding: 30px;
+            background-color: rgba(0, 20, 0, 0.25);
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.15);
+            position: relative;
+        }
+
+            .container::before {
+                content: '';
+                position: absolute;
+                top: -2px;
+                left: -2px;
+                right: -2px;
+                bottom: -2px;
+                background: linear-gradient(45deg, rgba(39,174,96,0.4), rgba(0,204,0,0.25), rgba(0,153,0,0.2), rgba(39,174,96,0.4));
+                background-size: 400% 400%;
+                z-index: -1;
+                animation: borderGlow 6s ease infinite;
+                border-radius: 4px;
+            }
+
+        @keyframes borderGlow {
+            0%,100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .system-title {
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+            text-shadow: 0 0 8px rgba(39,174,96,0.7);
+        }
+
+        img {
+            max-width: 100%;
+            margin-top: 20px;
+            border: 1px solid rgba(39,174,96,0.5);
+            box-shadow: 0 0 15px rgba(0,255,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="system-title">Система 00_12 перезапущена</h1>
+        <img src="images/ворота.jpeg" alt="image">
+    </div>
+</body>
+</html>
